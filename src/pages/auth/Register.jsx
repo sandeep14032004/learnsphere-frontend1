@@ -48,7 +48,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="common-btn" type="submit" disabled={btnLoading}>
+          <button className="btn" type="submit" disabled={btnLoading}>
             {btnLoading ? "Please Wait..." : "Register"}
           </button>
         </form>

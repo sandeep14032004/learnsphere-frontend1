@@ -42,7 +42,7 @@ const Login = () => {
             required
           />
 
-          <button disabled={btnLoading} className="common-btn" type="submit">
+          <button disabled={btnLoading} className="btn" type="submit">
             {btnLoading ? "Please Wait" : "Login"}
           </button>
         </form>
