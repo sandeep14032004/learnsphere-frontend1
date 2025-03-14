@@ -1,0 +1,193 @@
+/* Global Theme Variables */
+:root {
+    --primary-color: #0077ff;
+    --secondary-color: #00ccff;
+    --background-dark: #0b1120;
+    --text-light: #d1d8e0;
+    --box-bg: rgba(20, 25, 40, 0.9);
+    --button-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --button-hover-bg: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    --shadow: 0 5px 20px rgba(0, 170, 255, 0.2);
+    --glow-effect: 0 0 15px rgba(0, 170, 255, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Profile Section */
+.profile {
+    max-width: 1200px;
+    margin: 4rem auto;
+    background: var(--box-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Glow Effect on Hover */
+.profile:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(0, 170, 255, 0.4);
+}
+
+/* Animated Heading */
+.profile h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    background: var(--button-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--glow-effect);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Profile Information */
+.profile-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    border: 1px solid rgba(0, 170, 255, 0.3);
+}
+
+/* Hover Effect */
+.profile-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 170, 255, 0.3);
+}
+
+/* Text Styling */
+.profile-info p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: var(--text-light);
+    text-align: left;
+    padding-left: 2rem;
+    position: relative;
+}
+
+/* Buttons */
+.button {
+    background: var(--button-bg);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.5);
+    background: var(--button-hover-bg);
+}
+
+/* Floating Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .profile {
+        padding: 1.5rem;
+    }
+
+    .profile-info {
+        padding: 2rem;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        margin: 2rem auto;
+    }
+
+    .profile h2 {
+        font-size: 2.3rem;
+    }
+
+    .profile-info {
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
