@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { UserContextProvider } from "./context/UserContext.jsx";
 import { CourseContextProvider } from "./context/CourseContext.jsx";
 
-export const server = "https://learnsphere-server-sguw.onrender.com/";
+export const server = "https://learnsphere-server-sguw.onrender.com";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
